@@ -68,7 +68,7 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
     int i, w;
     int K[num_of_items + 1][max_weight + 1];
 
-    // Build table K[][] in a bottom-up manner
+    // Build table K[][]
     for (i = 0; i <= num_of_items; i++) {
         for (w = 0; w <= max_weight; w++) {
             if (i == 0 || w == 0)
@@ -101,7 +101,6 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
     return K[num_of_items][max_weight];
 }
 
-// Utility function to get maximum of two integers
 int max(int a, int b) {
     return (a > b) ? a : b;
 }
